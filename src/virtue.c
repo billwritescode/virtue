@@ -5,24 +5,27 @@
  ******************Licensed under MIT License*******************
  ***************************************************************
  * FILE NAME: virtue.c                                         *
- * PURPOSE:                                                    *
- * Play chess in various capacities                            *
- *                                                             *
+ * PURPOSE: Play chess in various capacities                   *
+ * SUPPORTS:                                                   *
+ * 	Protocols: UCI, Xboard                                     *
+ * OPTIONS:                                                    *
+ *	Flag			Usage									   *
+ *	-d				turn on debug mode						   *
  ***************************************************************/
 
-#include "stdio.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 #include "defs.h"
-#include "stdlib.h"
-#include "string.h"
+#include "fen.h"
 
+int main(int argc, char **argv) {
 
-#define WAC1 "r1b1k2r/ppppnppp/2n2q2/2b5/3NP3/2P1B3/PP3PPP/RN1QKB1R w KQkq - 0 1"
-#define PERFT "r3k2r/p1ppqpb1/bn2pnp1/3PN3/1p2P3/2N2Q1p/PPPBBPPP/R3K2R w KQkq - 0 1"
-
-/* The main program loop */
-int main(int argc, char *argv[]) {
-
-	AllInit();
+	AllInit(argc, argv);		/*	Changes debug to TRUE if 
+								*	command-line argument is
+								*	passed
+								*/
 
 	S_BOARD pos[1];
     S_SEARCHINFO info[1];
@@ -32,14 +35,9 @@ int main(int argc, char *argv[]) {
 	setbuf(stdin, NULL);
     setbuf(stdout, NULL);
     
-    int ArgNum = 0;
-    
-    for(ArgNum = 0; ArgNum < argc; ++ArgNum) {
-    	if(strncmp(argv[ArgNum], "NoBook", 6) == 0) {
-    		EngineOptions->UseBook = FALSE;
-    		printf("Book Off\n");
-    	}
-    }
+	printf("debug=%d\n",debug);
+
+
 
 	printf("Welcome to Vice! Type 'vice' for console mode...\n");
 
