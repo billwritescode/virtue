@@ -1,8 +1,8 @@
 #ifndef DEFS_H
 #define DEFS_H
 
-#include "stdlib.h"
-#include "stdio.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 // #define DEBUG
 
@@ -29,8 +29,6 @@ typedef unsigned long long U64;
 #define MAXGAMEMOVES 2048
 #define MAXPOSITIONMOVES 256
 #define MAXDEPTH 64
-
-#define START_FEN  "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
 
 #define INFINITE 30000
 #define ISMATE (INFINITE - MAXDEPTH)
@@ -158,9 +156,7 @@ typedef struct {
 	int UseBook;
 } S_OPTIONS;
 
-
 /* GAME MOVE */
-
 /*
 0000 0000 0000 0000 0000 0111 1111 -> From 0x7F
 0000 0000 0000 0011 1111 1000 0000 -> To >> 7, 0x7F
@@ -332,6 +328,9 @@ extern void Console_Loop(S_BOARD *pos, S_SEARCHINFO *info);
 extern int GetBookMove(S_BOARD *board);
 extern void CleanPolyBook();
 extern void InitPolyBook() ;
+
+//fen.c
+int ParseFen(char *fen, S_BOARD *pos);
 
 #endif
 

@@ -1,8 +1,9 @@
 // init.c
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <strings.h>
 #include "defs.h"
-#include "stdio.h"
-#include "stdlib.h"
 
 #define RAND_64 	((U64)rand() | \
 					(U64)rand() << 15 | \
@@ -31,6 +32,36 @@ U64 WhitePassedMask[64];
 U64 IsolatedMask[64];
 
 S_OPTIONS EngineOptions[1];
+
+int ProcessArgs(int argc, char** argv) {
+	/* Process command line args
+	*	Flags supported:
+	*	-d		debug
+	*/
+	int i; int debug_set = FALSE;
+	for (i = 0; i < argc; i++) {
+		if (strncmp(argv[i], "-d", 2) ==0 ) {	// If the argument is "-d"
+			const int debug = TRUE;
+			debug_set = TRUE;
+			printf("debug=%d\n",debug);
+		}
+		printf("The value of i:%d is:%s\n",i,argv[i]);
+	}
+	
+	if (!debug_set) {
+		const int debug = FALSE;
+	}
+		
+	int ArgNum = 0;
+    
+    for(ArgNum = 0; ArgNum < argc; ++ArgNum) {
+    	if(strncmp(argv[ArgNum], "NoBook", 6) == 0) {
+    		EngineOptions->UseBook = FALSE;
+    		printf("Book Off\n");
+    	}		
+		
+    }
+}
 
 void InitEvalMasks() {
 
@@ -180,7 +211,8 @@ void InitSq120To64() {
 	}
 }
 
-void AllInit() {
+void AllInit(int argc, char** argv) {
+	ProcessArgs(argc, argv);
 	InitSq120To64();
 	InitBitMasks();
 	InitHashKeys();

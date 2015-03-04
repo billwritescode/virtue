@@ -1,6 +1,16 @@
-// pvtable.c
-
-#include "stdio.h"
+/* 
+ * Virtue: better than VICE
+ * File: pvtable.c
+ * Usage: Implements a hash table to store gamestates.
+ * Functions:
+ * 		int GetPvLine(const int depth, S_BOARD *pos)
+ * 		void ClearHashTable(S_HASHTABLE *table)
+ * 		void InitHashTable(S_HASHTABLE *table, const int MB)
+ *		int ProbeHashEntry(S_BOARD *pos, int *move, int *score, int alpha, int beta, int depth)
+ *		void StoreHashEntry(S_BOARD *pos, const int move, int score, const int flags, const int depth)
+ *		int ProbePvMove(const S_BOARD *pos)		 
+ */
+#include <stdio.h>
 #include "defs.h"
 
 int GetPvLine(const int depth, S_BOARD *pos) {

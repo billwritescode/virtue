@@ -1,6 +1,11 @@
-// attack.c
-
-#include "stdio.h"
+/* 
+ * Virtue: better than VICE
+ * File: attack.c
+ * Usage: Determines if a square is attacked or not.
+ * Functions:
+ * 		int SqAttacked(const int sq, const int side, const S_BOARD *pos)	 
+ */
+#include <stdio.h>
 #include "defs.h"
 
 const int KnDir[8] = { -8, -19,	-21, -12, 8, 19, 21, 12 };

@@ -1,4 +1,8 @@
-// data.c
+/* 
+ * Virtue: better than VICE
+ * File: board.c
+ * Usage: Provides some useful data and arrays.
+ */
 #include "defs.h"
 
 char PceChar[] = ".PNBRQKpnbrqk";

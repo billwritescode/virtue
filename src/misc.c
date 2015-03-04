@@ -1,6 +1,14 @@
-// misc.c
+/* 
+ * Virtue: better than VICE
+ * File: io.c
+ * Usage: Provides some miscellaneous functions
+ * Functions:
+ *		int GetTimeMs()
+ *		int InputWaiting()
+ *		void ReadInput(S_SEARCHINFO *info)
+ */
 
-#include "stdio.h"
+#include <stdio.h>
 #include "defs.h"
 
 #ifdef WIN32

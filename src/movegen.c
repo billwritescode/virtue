@@ -1,6 +1,18 @@
-// movegen.c
-
-#include "stdio.h"
+/* 
+ * Virtue: better than VICE
+ * File: movegen.c
+ * Usage: Generates moves
+ * Functions:
+ *		void InitMvvLva()
+ *		static void AddQuietMove( const S_BOARD *pos, int move, S_MOVELIST *list)
+ *		static void AddCaptureMove( const S_BOARD *pos, int move, S_MOVELIST *list)
+ *		static void AddEnPassantMove( const S_BOARD *pos, int move, S_MOVELIST *list)
+ *		static void AddBlackPawnCapMove( const S_BOARD *pos, const int from, const int to, const int cap, S_MOVELIST *list)
+ *		static void AddBlackPawnMove( const S_BOARD *pos, const int from, const int to, S_MOVELIST *list)
+ *		void GenerateAllMoves(const S_BOARD *pos, S_MOVELIST *list)
+ */
+ 
+#include <stdio.h>
 #include "defs.h"
 
 #define MOVE(f,t,ca,pro,fl) ( (f) | ((t) << 7) | ( (ca) << 14 ) | ( (pro) << 20 ) | (fl))

@@ -1,8 +1,15 @@
-// uci.c
+/* 
+ * Virtue: better than VICE
+ * File: uci.c
+ * Usage: Implements the UCI communications protocol
+ * 
+ */
 
-#include "stdio.h"
+#include <stdio.h>
 #include "defs.h"
 #include "string.h"
+
+#include "fen.h"
 
 #define INPUTBUFFER 400 * 6
 

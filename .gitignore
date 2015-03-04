@@ -41,3 +41,12 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Program files created by make
+virture
+virtue.exe
+vice
+vice.exe
+
+# Make errors output file
+makeerror.out

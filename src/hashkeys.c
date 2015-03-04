@@ -1,5 +1,12 @@
-// hashkeys.c
-#include "stdio.h"
+/* 
+ * Virtue: better than VICE
+ * File: hashkeys.c
+ * Usage: Generates position hashkeys.
+ * Functions:
+ * 		U64 GeneratePosKey(const S_BOARD *pos)
+ */
+ 
+#include <stdio.h>
 #include "defs.h"
 
 U64 GeneratePosKey(const S_BOARD *pos) {

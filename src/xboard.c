@@ -1,8 +1,10 @@
 // xboard.c
 
-#include "stdio.h"
+#include <stdio.h>
 #include "defs.h"
 #include "string.h"
+
+#include "fen.h"
 
 int ThreeFoldRep(const S_BOARD *pos) {
 

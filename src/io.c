@@ -1,6 +1,15 @@
-// io.c
-
-#include "stdio.h"
+/* 
+ * Virtue: better than VICE
+ * File: io.c
+ * Usage: Provides input/output functions.
+ * Functions:
+ * 		char *PrSq(const int sq)
+ *		char *PrMove(const int move)
+ *		int ParseMove(char *ptrChar, S_BOARD *pos) 
+ *		void PrintMoveList(const S_MOVELIST *list)
+ *		void PrintMoveList(const S_MOVELIST *list)
+ */
+#include <stdio.h>
 #include "defs.h"
 
 char *PrSq(const int sq) {

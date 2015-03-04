@@ -1,7 +1,19 @@
-// makemove.c
+/* 
+ * Virtue: better than VICE
+ * File: makemove.c
+ * Usage: Makes and takes back moves, including null moves
+ * Functions:
+ * 		static void ClearPiece(const int sq, S_BOARD *pos)
+ *		static void AddPiece(const int sq, S_BOARD *pos, const int pce)
+ *		static void MovePiece(const int from, const int to, S_BOARD *pos)
+ *		int MakeMove(S_BOARD *pos, int move)
+ *		void TakeMove(S_BOARD *pos)
+ *		void MakeNullMove(S_BOARD *pos)
+ * 		void TakeNullMove(S_BOARD *pos)
+ */
+#include <stdio.h>
 
 #include "defs.h"
-#include "stdio.h"
 
 #define HASH_PCE(pce,sq) (pos->posKey ^= (PieceKeys[(pce)][(sq)]))
 #define HASH_CA (pos->posKey ^= (CastleKeys[(pos->castlePerm)]))

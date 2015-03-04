@@ -1,6 +1,14 @@
-// bitboards.c
+/* 
+ * Virtue: better than VICE
+ * File: bitboards.c
+ * Usage: Provides some bitboard implementation for partial board representations.
+ * Functions:
+ * 		int PopBit(U64 *bb)	 
+ * 		int CountBits(U64 b)	 
+ *		void PrintBitBoard(U64 bb)
+ */
 
-#include "stdio.h"
+#include <stdio.h>
 #include "defs.h"
 
 const int BitTable[64] = {

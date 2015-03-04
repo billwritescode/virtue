@@ -1,8 +1,23 @@
-// search.c
+/* 
+ * Virtue: better than VICE
+ * File: search.c
+ * Usage: 
+ *		Implements an Alpha-Beta search of the game board. Various
+ * 		improvements to Alpha-Beta here are quiescence search, most 
+ * 		valuable victim least valuable attacker (movegen.c), and null
+ * 		move pruning.
+ * Functions: 
+ * 		static void CheckUp(S_SEARCHINFO *info)
+ *		static void PickNextMove(int moveNum, S_MOVELIST *list)
+ *		static int IsRepetition(const S_BOARD *pos)
+ *		static void ClearForSearch(S_BOARD *pos, S_SEARCHINFO *info)
+ *		static int Quiescence(int alpha, int beta, S_BOARD *pos, S_SEARCHINFO *info)
+ *		static int AlphaBeta(int alpha, int beta, int depth, S_BOARD *pos, S_SEARCHINFO *info, int DoNull)
+ * 		void SearchPosition(S_BOARD *pos, S_SEARCHINFO *info)
+ */
 
-#include "stdio.h"
+#include <stdio.h>
 #include "defs.h"
-
 
 int rootDepth;
 

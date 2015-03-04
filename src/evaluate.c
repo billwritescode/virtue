@@ -1,6 +1,12 @@
-// evaluate.c
-
-#include "stdio.h"
+/* 
+ * Virtue: better than VICE
+ * File: evaluate.c
+ * Usage: Provides positional evaluation data.
+ * Functions:
+ * 		int MaterialDraw(const S_BOARD *pos)
+ *		int EvalPosition(const S_BOARD *pos)
+ */
+#include <stdio.h>
 #include "defs.h"
 
 const int PawnIsolated = -10;

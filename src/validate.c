@@ -1,7 +1,7 @@
 // validate.c
 
 #include "defs.h"
-#include "stdio.h"
+#include <stdio.h>
 #include "string.h"
 
 int MoveListOk(const S_MOVELIST *list,  const S_BOARD *pos) {

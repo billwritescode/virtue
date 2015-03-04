@@ -1,3 +1,10 @@
+/* 
+ * Virtue: better than VICE
+ * File: polykeys.h
+ * Usage: Header file with some definitions related to Polyglot keys
+ * Used with Polyglot. 
+ */
+
 #ifndef POLYKEYS_H
 #define POLYKEYS_H
 
